@@ -1,0 +1,22 @@
+{
+  "name": "Rust Tetris Dev",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": "..",
+    "target": "builder"
+  },
+  "workspaceFolder": "/usr/src/app",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/usr/src/app,type=bind,consistency=cached",
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash"
+  },
+  "extensions": [
+    "rust-lang.rust-analyzer",
+    "matklad.rust-analyzer"
+  ],
+  "remoteUser": "root"
+  // rust—p
+  "[rust]": {
+    "editor.defaultFormatter": "rust-lang.rust-analyzer"
+  },
+}
